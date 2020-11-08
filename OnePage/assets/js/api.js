@@ -1,6 +1,6 @@
 var dhSelection = "none"
 var timeSelection = "none"
-var restrictions = "none"
+var restrictions = ["VEGAN","VEGETARIAN","TREE_NUT_FREE","PEANUT_FREE"];
 var scrapeResults = {};
 var numRestrictions = 4;
 var restrictionsChosen = new Array(numRestrictions).fill(false);
@@ -39,9 +39,10 @@ function submitQuery() {
     if (dhSelection == "none" || timeSelection == "none") {
         document.getElementById("error").innerHTML = "<h2>Please select a dining hall and a meal type!</h2>";
     } else {
-        scrape(dhSelection, timeSelection);
-        //makeCorsRequest(buildQuery());
-        document.getElementById("submit").setAttribute("class", "submit-clicked");
+				document.getElementById("submit").setAttribute("class", "submit-clicked");
+        scrape();
+				readTextFile("test.txt");
+				buildAndSendQuery();
     }
 }
 
@@ -54,7 +55,7 @@ function scrape() {
             meal: timeSelection
         }
     }).done(function(o) {
-        readTextFile("test.json");
+				console.log("scrape successful");
     });
 }
 
@@ -72,22 +73,25 @@ function readTextFile(file) {
     rawFile.send(null);
 }
 
-function buildQuery() {
-    var items = scrapeResults.meals.genres.items;
-    var ingredients = [];
-    var recipe = "";
-    for (var i = 0 in items) {
-        recipe = '{ "title": "' + items[i].name + '", "ingr": [ ';
-        for (var j = 0 in ingredients) {
-            if (j = ingredients.length - 1) {
-                recipe += '"1 ' + ingredients[j];
-            } else {
-                recipe += '"1 ' + ingredients[j] + ',"';
-            }
-        }
-        recipe += ' ] }';
-        makeCorsRequest(recipe);
-    }
+function buildAndSendQuery() {
+	var items = scrapeResults.meals.genres.items;
+	var ingredients = [];
+	var recipe = "";
+	for (var i = 0 in items) {
+			//recipe = '{ "title": "' + items[i].name + '", "ingr": [ ';
+			for (var j = 0 in items.ingredients) {
+					if (j == ingredients.length - 1) {
+							recipe += '"1 ' + ingredients[j];
+					} else {
+							recipe += '"1 ' + ingredients[j] + ',"';
+					}
+			}
+			recipe += ' ] }';
+			makeCorsRequest(recipe);
+			if(i == 3){
+				break;
+			}
+	}
 }
 
 
@@ -126,6 +130,7 @@ function makeCorsRequest(recipe) {
         var text = xhr.responseText;
         console.log(text);
         const obj = JSON.parse(text);
+				checkRestrictions(obj);
         console.log(obj);
         pre.innerHTML = text;
     };
@@ -137,4 +142,12 @@ function makeCorsRequest(recipe) {
     pre.innerHTML = 'Loading...';
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(recipe);
+}
+
+function checkRestrictions(obj){
+	for (var i = 0 in restrictionsChosen) {
+			if (restrictionsChosen[i] && obj.healthLabels.contains(restrictions[i])) {
+				//display
+			}
+	}
 }
