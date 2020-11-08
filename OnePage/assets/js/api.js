@@ -1,5 +1,5 @@
-var dhSelection = "none"
-var timeSelection = "none"
+var dhSelection = "none";
+var timeSelection = "none";
 var restrictions = ["VEGAN", "VEGETARIAN", "TREE_NUT_FREE", "PEANUT_FREE"];
 var scrapeResults = {};
 var numRestrictions = 4;
@@ -7,6 +7,7 @@ var restrictionsChosen = new Array(numRestrictions).fill(false);
 var lastItem = null;
 var appID = "88cdd7f2";
 var key = "ba3e5208cfa9ff841e0a36b3eff4fc04";
+var data = '{ "location_name": "Busch Dining Hall", "meals": { "genres": [ { "items": [ { "name":"breakfast eggs","serving": "8 OZ.", "calories": 293, "ingredients": [ "1 fresh ham, about 18 pounds, prepared by your butcher (See Step 1)", "7 cloves garlic, minced", "1 tablespoon caraway seeds, crushed", "4 teaspoons salt", "Freshly ground pepper to taste", "1 teaspoon olive oil" ] }, { "name":"delicious eggs","serving": "1 EACH", "calories": 76, "ingredients": [ "1 fresh ham, about 18 pounds, prepared by your butcher (See Step 1)", "7 cloves garlic, minced", "1 tablespoon caraway seeds, crushed", "4 teaspoons salt", "Freshly ground pepper to taste", "1 teaspoon olive oil" ] } ], "genre_name": "BREAKFAST ENTREES" } ], "meal_name": "Lunch" } }';
 
 function selectDh(dh) {
     document.getElementById("Brower").setAttribute("class", "icon-box");
@@ -42,8 +43,8 @@ function submitQuery() {
     } else {
         document.getElementById("submit").setAttribute("class", "submit-clicked");
         document.getElementById("error").innerHTML = "";
-        scrape();
-        readTextFile("test.txt");
+        //scrape();
+        //readTextFile("test.txt");
         buildAndSendQuery();
     }
 }
@@ -67,36 +68,41 @@ function readTextFile(file) {
     rawFile.onreadystatechange = function() {
         if (rawFile.readyState === 4) {
             if (rawFile.status === 200 || rawFile.status == 0) {
-                scrapeResults = JSON.parse(rawFile.responseText);;
+                scrapeResults = JSON.parse(rawFile.responseText);
+								console.log(scrapeResults);
                 alert(rawFile.responseText);
             }
         }
     }
     rawFile.send(null);
 }
-
 function buildAndSendQuery() {
-    var items = scrapeResults.meals.genres.items;
+    scrapeResults = JSON.parse(data);
+    //console.log(scrapeResults);
+    var items = scrapeResults.meals.genres;
+    //console.log(items);
     var ingredients = [];
     var recipe = "";
     for (var i = 0 in items) {
-        lastItem = items[i];
-        recipe = '{ "title": "' + items[i].name + '", "ingr": [ ';
-        for (var j = 0 in items[i].ingredients) {
-            if (j == ingredients.length - 1) {
-                recipe += '"1 ' + ingredients[j];
-            } else {
-                recipe += '"1 ' + ingredients[j] + ',"';
-            }
-        }
-        recipe += ' ] }';
-        makeCorsRequest(recipe);
-        if (i == 3) {
-            break;
-        }
-    }
+			console.log(items[i]);
+			for(var j = 0 in items[i].items){
+	       recipe = '{ "title": "' + items[i].items[j].name + '", "ingr": [ ';
+				 for(var k = 0 in items[i].items[j].ingredients){
+		       ingredients = items[i].items[j].ingredients;
+					 console.log(ingredients[k]);
+		       if (k == ingredients.length - 1) {
+		          recipe += '"1 ' + ingredients[k] + '"';
+		       } else {
+		          recipe += '"1 ' + ingredients[k] + '",';
+		       }
+				}
+				recipe += ' ] }';
+	 		 console.log(recipe);
+	 		 makeCorsRequest(recipe);
+	   }
+		 
+	 }
 }
-
 
 // Create the XHR object.
 function createCORSRequest(method, url) {
@@ -135,20 +141,19 @@ function makeCorsRequest(recipe) {
         const obj = JSON.parse(text);
         checkRestrictions(obj);
         console.log(obj);
-        pre.innerHTML = text;
     };
 
     xhr.onerror = function() {
         alert('Woops, there was an error making the request.');
     };
 
-    pre.innerHTML = 'Loading...';
+    
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(recipe);
 }
 
 function checkRestrictions(obj) {
-    boolean flag = false;
+    var flag = false;
     for (var i = 0 in restrictionsChosen) {
         if (restrictionsChosen[i] && obj.healthLabels.contains(restrictions[i])) {
             flag = true;

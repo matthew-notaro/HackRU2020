@@ -1,0 +1,34 @@
+{
+   "location_name": "Busch Dining Hall",
+   "meals": {
+      "genres": [
+         {
+            "items": [
+               {
+                  "serving": "8 OZ.",
+                  "calories": 293,
+                  "ingredients": [
+                     "EGG LIQUID 2/20lb CASE CAGE FREE (WHOLE EGGS, CITRIC ACID.)",
+                     "BACON LAYOUT 16/18 * 15LBS (PORK BACON CURED WITH WATER, SALT, SUGAR, SODIUM PHOSPHATE, LIQUID SMOKE, SODIUM ERYTHORBATE, SODIUM NITRITE.)",
+                     "POTATO DICED",
+                     "PRD ONION SPANISH DRY",
+                     "WHITE GROUND PEPPER",
+                     "SALT"
+                  ]
+               },
+               {
+                  "serving": "1 EACH",
+                  "calories": 76,
+                  "ingredients": [
+                     "EGGS FRESH LARGE 30 DZ",
+                     "WATER FRESH",
+                     "SALT"
+                  ]
+               }
+            ],
+            "genre_name": "BREAKFAST ENTREES"
+         }
+      ],
+      "meal_name": "Lunch"
+   }
+}
