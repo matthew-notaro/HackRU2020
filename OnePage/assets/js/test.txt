@@ -5,28 +5,153 @@
          {
             "items": [
                {
-                  "serving": "8 OZ.",
-                  "calories": 293,
+                  "serving": "1 EACH",
+                  "calories": 143,
                   "ingredients": [
-                     "EGG LIQUID 2/20lb CASE CAGE FREE (WHOLE EGGS, CITRIC ACID.)",
-                     "BACON LAYOUT 16/18 * 15LBS (PORK BACON CURED WITH WATER, SALT, SUGAR, SODIUM PHOSPHATE, LIQUID SMOKE, SODIUM ERYTHORBATE, SODIUM NITRITE.)",
-                     "POTATO DICED",
-                     "PRD ONION SPANISH DRY",
-                     "WHITE GROUND PEPPER",
+                     "PINEAPPLE CUT FRSH",
+                     "STRAWBERRIES",
+                     "BLUEBERRIES"
+                  ]
+               },
+               {
+                  "serving": "12 OZ",
+                  "calories": 513,
+                  "ingredients": [
+                     "LOWFAT VANILLA YOGURT",
+                     "LOWFAT STRAWBERRY YOGURT",
+                     "BLUEBERRIES",
+                     "STRAWBERRIES",
+                     "NATURE VALLEY GRANOLA"
+                  ]
+               }
+            ],
+            "genre_name": "BREAKFAST MISC"
+         },
+         {
+            "items": [
+               {
+                  "serving": "4 OZ",
+                  "calories": 276,
+                  "ingredients": [
+                     "NATURAL CUT POTATO FRIES",
+                     "CANOLA OIL"
+                  ]
+               }
+            ],
+            "genre_name": "STARCH &  POTATOES"
+         },
+         {
+            "items": [
+               {
+                  "serving": "3 OZL",
+                  "calories": 227,
+                  "ingredients": [
+                     "GAL MILK",
+                     "GRATED PARMESAN CHEESE ",
+                     "CHEESE CULTURE",
+                     "SALT",
+                     "ENZYMES",
+                     "WHEY POWDER",
+                     "POWDERED CELLULOSE",
+                     "BUTTER",
+                     "FLOUR ALL PURPOSE (BLEACHED WHEAT FLOUR, NIACIN (A B VITAMIN)",
+                     "IRON",
+                     "THIAMINE MONONITRATE (VITAMIN B1)",
+                     "RIBOFLAVIN (VITAMIN B2)",
+                     "ENZYMES",
+                     "FOLIC ACID (A B VITAMIN))",
+                     "WHITE GROUND PEPPER"
+                  ]
+               },
+               {
+                  "serving": "4 OZ",
+                  "calories": 43,
+                  "ingredients": [
+                     "WATER",
+                     "BROCCOLI FLORETTES 4/3#",
+                     "OLIVE OIL",
                      "SALT"
                   ]
                },
                {
-                  "serving": "1 EACH",
-                  "calories": 76,
+                  "serving": "3 OZ",
+                  "calories": 166,
                   "ingredients": [
-                     "EGGS FRESH LARGE 30 DZ",
-                     "WATER FRESH",
-                     "SALT"
+                     "CHICKEN STRIP",
+                     "OIL OLIVE"
                   ]
-               }
+               },
+               {
+                  "serving": "3 OZ",
+                  "calories": 71,
+                  "ingredients": [
+                     "TOFU"
+                  ]
+               },
+               {
+                  "serving": "4 OZ",
+                  "calories": 215,
+                  "ingredients": [
+                     "WATER",
+                     "PASTA",
+                     "WHEAT FLOUR",
+                     "VITAMIN B3",
+                     "IRON",
+                     "VITAMIN B1",
+                     "VITAMIIN B2"
+                  ]
+               },
+               {
+                  "serving": "4 OZ",
+                  "calories": 90,
+                  "ingredients": [
+                     "WATER",
+                     "PEAS"
+                  ]
+               },
+               {
+                  "serving": "4 OZ",
+                  "calories": 316,
+                  "ingredients": [
+                     "BEEF MEATBALL",
+                     "WHEY POWDER",
+                     "YEAST EXTRACT",
+                     "LACTIC ACID",
+                     "SALT",
+                     "DRIED GARLIC",
+                     "SPICES",
+                     "PARSLEY FLAKES",
+                     "BROWN SUGAR",
+                     "BREADCRUMBS",
+                     "EGG WHITES",
+                     "FLAVORING",
+                     "CORN OIL",
+                     "SALT",
+                     "SPICES",
+                     "PRD ONION SPANISH DRY",
+                     "OIL WESSON CANOLA 4/1GAL",
+                     "OREGANO LEAVES",
+                     "PRD GARLIC PEELED FRESH GAL",
+                     "BASIL LEAF",
+                     "THYME LEAVES",
+                     "CRUSHED RED PEPPER FLAKES"
+                  ]
+               },
+               {
+                  "serving": "4 OZ",
+                  "calories": 41,
+                  "ingredients": [
+                     "TOMATO",
+                     "ONION",
+                     "PEELED GARLIC",
+                     "FRESH BASIL",
+                     "OIL OLIVE",
+                     "SALT",
+                     "BLACK PEPPER"
+                  ]
+								}
             ],
-            "genre_name": "BREAKFAST ENTREES"
+            "genre_name": "COOK TO ORDER BAR"	
          }
       ],
       "meal_name": "Lunch"

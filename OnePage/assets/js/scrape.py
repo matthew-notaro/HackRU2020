@@ -17,10 +17,10 @@ def scrapeNutritionReport(url):
 
 	# Get item name
 	try:
-		ret['name'] = soup.find(id="content-text").find_all("h2")[1].string
+		ret['name'] = soup.find_all("h2")[2].string
 	except AttributeError:
 		pass
-
+	
 	# Get serving size
 	try:
 		ret['serving'] = soup.find(id="facts").find("p", "").string[len("Serving Size "):]
@@ -106,7 +106,6 @@ def scrape(location , meal, dicts=0):
 			"location_name" : halls[locationNum][0],
 			"meals" : scrapeCampus(meal, prefix + halls[locationNum][1], dicts=0)
 		}
-
 
 
 if __name__=="__main__":
