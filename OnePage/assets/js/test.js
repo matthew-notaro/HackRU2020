@@ -50,19 +50,6 @@ function submitQuery() {
 }
 
 function scrape() {
-    $.ajax({
-        type: "POST",
-        url: "http://localhost:8000",
-        data: {
-            location: dhSelection,
-            meal: timeSelection
-        }
-    })
-    .done(function(o) {
-        print("success")
-    })
-    .fail(function() {
-        alert("sad");
-    })
-    ;
+    let util = require('child_process')
+    let subproc = util.execSync('python scrape.py test.txt ' + dhSelection + ' ' + timeSelection);
 }
