@@ -1,9 +1,10 @@
 var dhSelection = "none"
 var timeSelection = "none"
-var restrictions = "none"
+var restrictions = ["VEGAN", "VEGETARIAN", "TREE_NUT_FREE", "PEANUT_FREE"];
 var scrapeResults = {};
 var numRestrictions = 4;
 var restrictionsChosen = new Array(numRestrictions).fill(false);
+var lastItem = null;
 var appID = "88cdd7f2";
 var key = "ba3e5208cfa9ff841e0a36b3eff4fc04";
 
@@ -39,9 +40,11 @@ function submitQuery() {
     if (dhSelection == "none" || timeSelection == "none") {
         document.getElementById("error").innerHTML = "<h2>Please select a dining hall and a meal type!</h2>";
     } else {
-        scrape(dhSelection, timeSelection);
-        //makeCorsRequest(buildQuery());
         document.getElementById("submit").setAttribute("class", "submit-clicked");
+        document.getElementById("error").innerHTML = "";
+        scrape();
+        readTextFile("test.txt");
+        buildAndSendQuery();
     }
 }
 
@@ -54,7 +57,7 @@ function scrape() {
             meal: timeSelection
         }
     }).done(function(o) {
-        readTextFile("test.json");
+        console.log("scrape successful");
     });
 }
 
@@ -72,14 +75,15 @@ function readTextFile(file) {
     rawFile.send(null);
 }
 
-function buildQuery() {
+function buildAndSendQuery() {
     var items = scrapeResults.meals.genres.items;
     var ingredients = [];
     var recipe = "";
     for (var i = 0 in items) {
+        lastItem = items[i];
         recipe = '{ "title": "' + items[i].name + '", "ingr": [ ';
-        for (var j = 0 in ingredients) {
-            if (j = ingredients.length - 1) {
+        for (var j = 0 in items[i].ingredients) {
+            if (j == ingredients.length - 1) {
                 recipe += '"1 ' + ingredients[j];
             } else {
                 recipe += '"1 ' + ingredients[j] + ',"';
@@ -87,6 +91,9 @@ function buildQuery() {
         }
         recipe += ' ] }';
         makeCorsRequest(recipe);
+        if (i == 3) {
+            break;
+        }
     }
 }
 
@@ -126,6 +133,7 @@ function makeCorsRequest(recipe) {
         var text = xhr.responseText;
         console.log(text);
         const obj = JSON.parse(text);
+        checkRestrictions(obj);
         console.log(obj);
         pre.innerHTML = text;
     };
@@ -137,4 +145,34 @@ function makeCorsRequest(recipe) {
     pre.innerHTML = 'Loading...';
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(recipe);
+}
+
+function checkRestrictions(obj) {
+    boolean flag = false;
+    for (var i = 0 in restrictionsChosen) {
+        if (restrictionsChosen[i] && obj.healthLabels.contains(restrictions[i])) {
+            flag = true;
+            if (document.getElementById("results").innerHTML == "") {
+                document.getElementById("results").innerHTML += '<section id="faq" class="faq section-bg"> <div class="container" data-aos="fade-up"> <div class="faq-list"> <ul>';
+            } else {
+                document.getElementById("results").innerHTML += '<li data-aos="fade-up"> <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapse" href="#faq-list-1">';
+                document.getElementById("results").innerHTML += lastItem.name;
+                document.getElementById("results").innerHTML += '<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a> <div id="faq-list-1" class="collapse show" data-parent=".faq-list"> <p>';
+                for (var j = 0 in items[i].ingredients) {
+                    if (j == items[i].ingredients.length - 1) {
+                        document.getElementById("results").innerHTML += lastItem.ingredients;
+                    } else {
+                        document.getElementById("results").innerHTML += lastItem.ingredients + ', ';
+                    }
+
+                }
+                document.getElementById("results").innerHTML += '</p></div></li>';
+            }
+        }
+    }
+
+    if (flag) {
+        document.getElementById("results").innerHTML += '</ul></div></div></section>';
+    }
+
 }
