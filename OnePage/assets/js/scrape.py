@@ -34,13 +34,13 @@ def scrapeNutritionReport(url):
 		pass
 
 	# Get ingredient list
-	# try:
-	# 	e = soup.find(text=compile("INGREDIENTS")).parent
-	# 	p = e.parent
-	# 	e.decompose()
-	# 	ret['ingredients'] = [ing.strip() for ing in ingredientSplit.findall(p.string)]
-	# except AttributeError:
-	# 	pass
+	try:
+		e = soup.find(text=compile("INGREDIENTS")).parent
+		p = e.parent
+		e.decompose()
+		ret['ingredients'] = [ing.strip() for ing in ingredientSplit.findall(p.string)]
+	except AttributeError:
+		pass
 
 	return ret
 
