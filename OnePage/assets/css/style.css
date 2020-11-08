@@ -14,11 +14,11 @@ body {
 }
 
 a {
-  color: #2487ce;
+  color: #bf847e;
 }
 
 a:hover {
-  color: #469fdf;
+  color: #edc6c2;
   text-decoration: none;
 }
 
@@ -45,13 +45,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  background: #2487ce;
+  background: #ebcdca;
   color: #fff;
   transition: all 0.4s;
 }
 
 .back-to-top i:hover {
-  background: #3e9bdd;
+  background: #ebcdca;
   color: #fff;
 }
 
@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #2487ce;
+  border: 6px solid #8a2525;
   border-top-color: #fff;
   border-bottom-color: #fff;
   border-radius: 50%;
@@ -138,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo a {
-  color: #16507b;
+  color: #80241d;
 }
 
 #header .logo img {
@@ -174,14 +174,14 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
   display: block;
   position: relative;
-  color: #124265;
+  color: #8a2525;
   transition: 0.3s;
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: #2487ce;
+  color: #b87b7b;
 }
 
 .nav-menu .drop-down ul {
@@ -215,11 +215,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
   font-weight: 500;
   text-transform: none;
-  color: #124265;
+  color: #7a1f1f;
 }
 
 .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
-  color: #2487ce;
+  color: #b87b7b;
 }
 
 .nav-menu .drop-down > a:after {
@@ -265,7 +265,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Get Startet Button */
 .get-started-btn {
   margin-left: 25px;
-  background: #2487ce;
+  background: #b55555;
   color: #fff;
   border-radius: 5px;
   padding: 10px 30px 11px 30px;
@@ -277,7 +277,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .get-started-btn:hover {
-  background: #2079b8;
+  background: #b55555;
   color: #fff;
 }
 
@@ -306,7 +306,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-toggle i {
-  color: #124265;
+  color: #b55555;
 }
 
 .mobile-nav {
@@ -341,7 +341,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #2487ce;
+  color: #b55555;
   text-decoration: none;
 }
 
@@ -427,7 +427,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 56px;
   font-weight: 700;
   line-height: 72px;
-  color: #124265;
+  color: #7a1f1f;
   font-family: "Poppins", sans-serif;
 }
 
@@ -448,11 +448,11 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.5s;
   margin-top: 30px;
   color: #fff;
-  background: #2487ce;
+  background: #b55555;
 }
 
 #hero .btn-get-started:hover {
-  background: #3194db;
+  background: #b55555;
 }
 
 #hero .icon-boxes {
@@ -553,7 +553,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .icon-box .title a {
-  color: #124265;
+  color: #7a1f1f;
   transition: 0.3s;
 }
 
@@ -570,7 +570,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease-in-out;
   font-size: 36px;
   line-height: 1;
-  color: #2487ce;
+  color: #b55555;
 }
 
 #hero .icon-box:hover {
@@ -578,7 +578,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .icon-box:hover .title a {
-  color: #2487ce;
+  color: #b55555;
 }
 
 @media (min-width: 1024px) {
@@ -592,8 +592,10 @@ h1, h2, h3, h4, h5, h6 {
     height: auto;
   }
   #hero h1 {
+		margin-top:20px;
     font-size: 28px;
     line-height: 36px;
+		margin-bottom:20px;
   }
   #hero h2 {
     font-size: 18px;
@@ -623,7 +625,7 @@ section {
   text-transform: uppercase;
   margin-bottom: 20px;
   padding-bottom: 0;
-  color: #124265;
+  color: #7a1f1f;
 }
 
 .section-title p {
@@ -659,7 +661,7 @@ section {
   left: 0;
   top: 2px;
   font-size: 20px;
-  color: #2487ce;
+  color: #b55555;
   line-height: 1;
 }
 
@@ -677,15 +679,15 @@ section {
   border-radius: 5px;
   transition: 0.3s;
   line-height: 1;
-  color: #2487ce;
+  color: #b55555;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
   margin-top: 6px;
-  border: 2px solid #2487ce;
+  border: 2px solid #b55555;
 }
 
 .about .content .btn-learn-more:hover {
-  background: #2487ce;
+  background: #b55555;
   color: #fff;
   text-decoration: none;
 }

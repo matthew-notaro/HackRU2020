@@ -1,1 +1,159 @@
-{"location_name": "Busch Dining Hall", "meals": {"genres": [{"items": [{"serving": "1 EACH", "calories": 143, "name": "FRESH FRUIT CUP"}, {"serving": "12 OZ", "calories": 513, "name": "YOGURT PARFAIT"}], "genre_name": "BREAKFAST MISC"}, {"items": [{"serving": "4 OZ", "calories": 276, "name": "NATURAL WEDGE POTATOES"}], "genre_name": "STARCH &  POTATOES"}, {"items": [{"serving": "3 OZL", "calories": 227, "name": "ALFREDO SAUCE"}, {"serving": "4 OZ", "calories": 43, "name": "BROCCOLI FLORETS"}, {"serving": "3 OZ", "calories": 166, "name": "COOKED CHIX STRIPS"}, {"serving": "3 OZ", "calories": 71, "name": "DICED TOFU"}, {"serving": "4 OZ", "calories": 215, "name": "FARFALLE PASTA"}, {"serving": "4 OZ", "calories": 90, "name": "GREEN PEAS"}, {"serving": "4 OZ", "calories": 316, "name": "ITALIAN MEATBALLS .5 OZ"}, {"serving": "4 OZ", "calories": 41, "name": "MARINARA SAUCE"}, {"serving": "6 EACH", "calories": 523, "name": "MUSHROOM RAVIOLI"}, {"serving": "6 OZ", "calories": 415, "name": "OMELETS MADE TO ORDER"}, {"serving": "1 OZ", "calories": 129, "name": "SAUCE PESTO"}, {"serving": "4 OZ", "calories": 145, "name": "TOFU TERIYAKI"}, {"serving": "4 OZ", "calories": 120, "name": "VEGETABLE FRIED RICE"}], "genre_name": "COOK TO ORDER BAR"}, {"items": [{"serving": "6 OZ", "calories": 112, "name": "VEGAN VIETNAMESE COCONUT SOUP"}], "genre_name": "SOUPS"}, {"items": [{"serving": "1 EACH", "calories": 586, "name": "BUFFALO CHICKEN WRAP"}, {"serving": "1 EACH", "calories": 730, "name": "CHICKEN CAESAR WRAP"}, {"serving": "1 EACH", "calories": 820, "name": "CLASSIC SUB"}, {"serving": "1 EACH", "calories": 975, "name": "DOUBLE SPICE ROAST BEEF"}, {"serving": "1 EACH", "calories": 1287, "name": "PEPPER HAM AND MUENSTER CHEESE SUB"}, {"serving": "1 EACH", "calories": 1026, "name": "PROSCIUTTO FIG ON BAGUETTE"}, {"serving": "1 EACH", "calories": 1680, "name": "PULLED CHIPOTLE CHICKEN CIABATTA"}, {"serving": "1 EACH", "calories": 387, "name": "ROASTED CHICKPEA SALAD ON FOCACCIA"}], "genre_name": "DELI BAR ENTREE"}, {"items": [{"serving": "1 EACH", "calories": 266, "name": "BREADED CHICKEN PATTY"}, {"serving": "4 OZ", "calories": 257, "name": "CHICKEN NUGGETS"}, {"serving": "4 OZ", "calories": 256, "name": "CHICKEN NUGGETS HALAL"}, {"serving": "4 OZ", "calories": 217, "name": "FRENCH FRIES"}, {"serving": "4 OZ", "calories": 151, "name": "GRILLED CHICKEN BREAST 4OZ"}, {"serving": "1 EACH", "calories": 246, "name": "GRILLED HOT DOGS"}, {"serving": "1 EACH", "calories": 307, "name": "HAMBURGER QUARTER POUNDER"}, {"serving": "4 OZ", "calories": 316, "name": "ITALIAN MEATBALLS .5 OZ"}, {"serving": "5 EACH", "calories": 621, "name": "MOZZARELLA CHEESE STICKS"}, {"serving": "4 OZ", "calories": 297, "name": "PHILLY STEAK MEAT"}, {"serving": "1 EACH", "calories": 1167, "name": "ROUND CHEESE PIZZA"}, {"serving": "1 EACH", "calories": 1165, "name": "ROUND PEPPERONI PIZZA"}, {"serving": "1 EACH", "calories": 146, "name": "VEGAN BLACK BEAN BURGER"}, {"serving": "1 EACH", "calories": 137, "name": "VEGAN DELI DOGS"}, {"serving": "4 OZ", "calories": 264, "name": "VEGAN FRIED NUGGETS"}, {"serving": "21 OZ", "calories": 2276, "name": "WINGS FRIED"}], "genre_name": "PUB"}, {"items": [{"name": "AORTED DONUTS"}, {"serving": "1 EACH", "calories": 353, "name": "BAGEL WEEKEND ASSORTMENT"}], "genre_name": "BREAKFAST BAKERY"}, {"items": [{"serving": "8 OZ.", "calories": 293, "name": "BACON AND EGG FRITATTA"}, {"serving": "1 EACH", "calories": 76, "name": "HARD BOILED EGGS"}], "genre_name": "BREAKFAST ENTREES"}, {"items": [{"name": "CHICKEN SAUSAGE PATTY"}, {"serving": "2 EACH", "calories": 140, "name": "VEGETARIAN BREAKFAST PATTIES"}], "genre_name": "BREAKFAST MEATS"}, {"items": [{"serving": "4 OZ", "calories": 50, "name": "OKRA AND TOMATOES"}], "genre_name": "VEGGIES"}, {"items": [{"serving": "1 EACH", "calories": 400, "name": "CLUB ROLL 6\" SLICED"}, {"serving": "1 EACH", "calories": 120, "name": "HAMBURGER BUN 4\""}, {"serving": "1 EACH", "calories": 123, "name": "HOT DOG ROLL"}], "genre_name": "BAKERY MISC"}], "meal_name": "Lunch"}}
+{
+   "location_name": "Busch Dining Hall",
+   "meals": {
+      "genres": [
+         {
+            "items": [
+               {
+                  "serving": "1 EACH",
+                  "calories": 143,
+                  "ingredients": [
+                     "PINEAPPLE CUT FRSH",
+                     "STRAWBERRIES",
+                     "BLUEBERRIES"
+                  ]
+               },
+               {
+                  "serving": "12 OZ",
+                  "calories": 513,
+                  "ingredients": [
+                     "LOWFAT VANILLA YOGURT",
+                     "LOWFAT STRAWBERRY YOGURT",
+                     "BLUEBERRIES",
+                     "STRAWBERRIES",
+                     "NATURE VALLEY GRANOLA"
+                  ]
+               }
+            ],
+            "genre_name": "BREAKFAST MISC"
+         },
+         {
+            "items": [
+               {
+                  "serving": "4 OZ",
+                  "calories": 276,
+                  "ingredients": [
+                     "NATURAL CUT POTATO FRIES",
+                     "CANOLA OIL"
+                  ]
+               }
+            ],
+            "genre_name": "STARCH &  POTATOES"
+         },
+         {
+            "items": [
+               {
+                  "serving": "3 OZL",
+                  "calories": 227,
+                  "ingredients": [
+                     "GAL MILK",
+                     "GRATED PARMESAN CHEESE ",
+                     "CHEESE CULTURE",
+                     "SALT",
+                     "ENZYMES",
+                     "WHEY POWDER",
+                     "POWDERED CELLULOSE",
+                     "BUTTER",
+                     "FLOUR ALL PURPOSE (BLEACHED WHEAT FLOUR, NIACIN (A B VITAMIN)",
+                     "IRON",
+                     "THIAMINE MONONITRATE (VITAMIN B1)",
+                     "RIBOFLAVIN (VITAMIN B2)",
+                     "ENZYMES",
+                     "FOLIC ACID (A B VITAMIN))",
+                     "WHITE GROUND PEPPER"
+                  ]
+               },
+               {
+                  "serving": "4 OZ",
+                  "calories": 43,
+                  "ingredients": [
+                     "WATER",
+                     "BROCCOLI FLORETTES 4/3#",
+                     "OLIVE OIL",
+                     "SALT"
+                  ]
+               },
+               {
+                  "serving": "3 OZ",
+                  "calories": 166,
+                  "ingredients": [
+                     "CHICKEN STRIP",
+                     "OIL OLIVE"
+                  ]
+               },
+               {
+                  "serving": "3 OZ",
+                  "calories": 71,
+                  "ingredients": [
+                     "TOFU"
+                  ]
+               },
+               {
+                  "serving": "4 OZ",
+                  "calories": 215,
+                  "ingredients": [
+                     "WATER",
+                     "PASTA",
+                     "WHEAT FLOUR",
+                     "VITAMIN B3",
+                     "IRON",
+                     "VITAMIN B1",
+                     "VITAMIIN B2"
+                  ]
+               },
+               {
+                  "serving": "4 OZ",
+                  "calories": 90,
+                  "ingredients": [
+                     "WATER",
+                     "PEAS"
+                  ]
+               },
+               {
+                  "serving": "4 OZ",
+                  "calories": 316,
+                  "ingredients": [
+                     "BEEF MEATBALL",
+                     "WHEY POWDER",
+                     "YEAST EXTRACT",
+                     "LACTIC ACID",
+                     "SALT",
+                     "DRIED GARLIC",
+                     "SPICES",
+                     "PARSLEY FLAKES",
+                     "BROWN SUGAR",
+                     "BREADCRUMBS",
+                     "EGG WHITES",
+                     "FLAVORING",
+                     "CORN OIL",
+                     "SALT",
+                     "SPICES",
+                     "PRD ONION SPANISH DRY",
+                     "OIL WESSON CANOLA 4/1GAL",
+                     "OREGANO LEAVES",
+                     "PRD GARLIC PEELED FRESH GAL",
+                     "BASIL LEAF",
+                     "THYME LEAVES",
+                     "CRUSHED RED PEPPER FLAKES"
+                  ]
+               },
+               {
+                  "serving": "4 OZ",
+                  "calories": 41,
+                  "ingredients": [
+                     "TOMATO",
+                     "ONION",
+                     "PEELED GARLIC",
+                     "FRESH BASIL",
+                     "OIL OLIVE",
+                     "SALT",
+                     "BLACK PEPPER"
+                  ]
+								}
+            ],
+            "genre_name": "COOK TO ORDER BAR"	
+         }
+      ],
+      "meal_name": "Lunch"
+   }
+}
