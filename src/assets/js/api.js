@@ -56,16 +56,8 @@ function submitQuery() {
 }
 
 function scrape() {
-    $.ajax({
-        type: "POST",
-        url: "/scrape.py",
-        data: {
-            location: dhSelection,
-            meal: timeSelection
-        }
-    }).done(function(o) {
-        console.log("scrape successful");
-    });
+    let util = require('child_process')
+    let subproc = util.execSync('python scrape.py ' + dhSelection + ' ' + timeSelection);
 }
 
 function readTextFile(file) {

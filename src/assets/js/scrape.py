@@ -111,6 +111,7 @@ def scrape(location , meal, dicts=0):
 if __name__=="__main__":
 	import json
 	import sys
+	from time import sleep
 	from argparse import ArgumentParser, FileType
 
 	parser = ArgumentParser(prog='RU Food Scraper', description='Scrape the Rutgers ' +
@@ -126,3 +127,4 @@ if __name__=="__main__":
 	args = parser.parse_args()
 	json.dump(scrape(args.location, args.meal, dicts=args.dicts), args.outfile, indent=(1 if args.fancy else None))
 	args.outfile.close()
+	sleep(10)
